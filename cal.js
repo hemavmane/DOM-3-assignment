@@ -40,25 +40,25 @@ btn.map((x)=>{
     }else if(b=="rad"){
         display.innerText+=0.01745
 
-    } else if(b=="X!"){
-
-function facto(num,fact=1){
-    let num = b;
-    if(num<0){
-        return error
-    }else if(0>num){
-        fact += fact*num
-        facto(fact+1,num)
-    } 
-}
- console.log(facto.display.innerText)
-}
+  } else if(b=="X!"){
     
+    function facto(num){
+        if(num==0){
+            return 1
+        }else{
+          return   num*facto(num-1)
+        }
+        
+    } display.innerText=facto(display.innerText)
+
+  }else if(b=="x^2"){
+display.innerText=eval(display.innerText*display.innerText)
+
+  }
+
     else{
         display.innerText +=b
     }
 
     })
 })
-
-
